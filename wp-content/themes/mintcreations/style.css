@@ -1,0 +1,187 @@
+/*
+Theme Name: Mint Creations
+Theme URI: http://wordpress.org/extend/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentytwelve
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+
+*
+{
+	padding:0;
+	margin:0;
+}
+
+body,html
+{
+	width:100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+body
+{
+	background: #b6e026; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #b6e026 0%, #abdc28 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b6e026), color-stop(100%,#abdc28)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover, #b6e026 0%,#abdc28 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover, #b6e026 0%,#abdc28 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover, #b6e026 0%,#abdc28 100%); /* IE10+ */
+background: radial-gradient(ellipse at center, #b6e026 0%,#abdc28 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6e026', endColorstr='#abdc28',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background: url(resource/image/bg.jpg);
+background-attachment: fixed;
+overflow: auto;
+}
+#view1
+{
+	text-align: center;
+}
+#view1 h2
+{
+	color:#fff;
+	text-shadow: 1px 1px 1px #597015;
+	font-size: 14px;
+}
+.logo
+{
+	font-family: 'Pathway Gothic One', sans-serif;
+	color:#fff;
+	width:100%;
+	text-align: center;
+	font-size: 60px;
+	text-shadow: 2px 1px 1px #597015;
+	margin-top: 100px;
+}
+.mintleaf
+{
+	width:400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.green-circle
+{
+	background: url(resource/image/green_circle.png) no-repeat;
+	width:218px;
+	height:210px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.green-circle:hover
+{
+	background-position: 0 -210px;
+}
+.nav
+{
+	list-style: none;
+	width:654px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+.nav li
+{
+	float:left;
+}
+.nav li p
+{
+	width:100%;
+	text-align: center;
+	color:#fff;
+	padding-top: 50px;
+	font-size: 20px;
+	font-weight: 700;
+	text-shadow: 1px 1px 1px #597015;
+}
+.nav li p.lower
+{
+	padding-top: 100px;
+}
+.clearBoth
+{
+	float: none;
+	clear:both;
+}
+#view2
+{
+	/*background-color:#7b9b1b;*/
+	-moz-box-shadow: inset 0px 10px 10px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0px 10px 10px rgba(0,0,0,0.3);
+	box-shadow: inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+.contentHolder
+{
+	width:1000px;
+	height:370px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #7b9b1b;
+	color:#FFFFFF;
+	overflow: auto;
+	padding-top: 30px;
+}
+.contentHolder .title
+{
+	font-size: 30px;
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+.contentHolder .copy
+{
+	list-style: none;
+	padding-left: 20px;
+	font-size: 12px;
+}
+.contentHolder .copy li
+{
+	width:200px;
+	text-align: justify;
+	float: left;
+	margin-right: 40px;
+}
